@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 void bricks(int n);
-void printSigns(int i, char c);
+void print_signs(int i, char c);
 
 int main(void)
 {
@@ -18,15 +18,15 @@ void bricks(int n)
 {
     for (int i = 1; i <= n; i++)
     {
-        printSigns(n - i, ' ');
-        printSigns(i, '#');
+        print_signs(n - i, ' ');
+        print_signs(i, '#');
         printf("  ");
-        printSigns(i, '#');
+        print_signs(i, '#');
         printf("\n");
     }
 }
 
-void printSigns(int i, char c)
+void print_signs(int i, char c)
 {
     for (int j = 0; j < i; j++)
     {
