@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 void bricks(int n);
-void printSigns(int i, char c);
+void print_signs(int i, char c);
     
 int main(void)
 {
@@ -16,7 +16,7 @@ int main(void)
 
 void bricks(int n)
 {
-    //create rows
+    //add rows
     for (int i = 1; i <= n; i++)
     {
         print_signs(n - i, ' ');
@@ -25,9 +25,9 @@ void bricks(int n)
     }
 }
 
-void printSigns(int i, char c)
+void print_signs(int i, char c)
 {
-    //create cols
+    //add cols
     for (int j = 0; j < i; j++)
     {
         printf("%c", c);
