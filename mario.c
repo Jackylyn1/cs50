@@ -9,23 +9,25 @@ int main(void)
     do
     { 
         height = get_int("What is the pyramides height? (positive number between 1 and 8)\n");
-     }
-    while(height < 1 || height > 8);
+    }
+    while (height < 1 || height > 8);
     bricks(height);
 }
 
 void bricks(int n)
 {
+    //create rows
     for (int i = 1; i <= n; i++)
     {
-        printSigns(n - i, ' ');
-        printSigns(i, '#');
+        print_signs(n - i, ' ');
+        print_signs(i, '#');
         printf("\n");
     }
 }
 
 void printSigns(int i, char c)
 {
+    //create cols
     for (int j = 0; j < i; j++)
     {
         printf("%c", c);
