@@ -17,9 +17,9 @@ int main(void)
 
 void bricks(int n)
 {
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i <= n; i++)
     {
-        printSigns(7 - i,' ');
+        printSigns(n - i,' ');
         printSigns(i,'#');
         printf("\n");
     }
@@ -27,7 +27,7 @@ void bricks(int n)
 
 void printSigns(int i, char c)
 {
-     for (int j = 0; j <= i; j++)
+     for (int j = 0; j < i; j++)
       {
           printf("%c", c);
       }
