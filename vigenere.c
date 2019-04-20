@@ -24,11 +24,12 @@ int main(int argc, string argv[])
         {
             int num_plus;
             int key;
+            int cnt = 0;
             string text = get_string("plaintext: ");
             for (int i = 0, n = strlen(text); i < n; i++)
             {
                 //find out what the actual key is
-                key =  shift(keyword[i % strlen(keyword)]);
+                key =  shift(keyword[cnt % strlen(keyword)]);
                 num_plus = 0;
                 if (islower(text[i]))
                 {
@@ -41,6 +42,7 @@ int main(int argc, string argv[])
                 if (num_plus)
                 {
                     text[i] = (text[i] + key - num_plus) % 26 + num_plus;
+                    cnt++;
                 }
             }
             printf("ciphertext: %s\n", text);
@@ -50,7 +52,7 @@ int main(int argc, string argv[])
     
     if (error == 1)
     {
-        printf("Usage: ./caesar key\n");
+        printf("Usage: ./vigenere keyword\n");
         return 1;
     }
 }
