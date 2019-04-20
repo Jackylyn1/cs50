@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(int argc, string argv[])
+
+verschieben um argv[]
+
+argv muss kein int sein aber wenn dann pos num else: return Usage: ./caesar key
+
+insert plaintext
+A-z? then:
+(plaintext (each) + argv[i])%26
+lowercase remain lowercase and uppercase remain uppercase
+else do nothing
+output ciphertext
