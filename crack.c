@@ -48,7 +48,7 @@ string check_pw(int max_pos, int pos, char salt[], string hash, string before)
         if (max_pos > pos)
         {
             string pw_other = check_pw(max_pos, pos + 1, salt, hash, pw);
-            if(pw_other)
+            if (pw_other)
             {
                 return pw_other;
             }
@@ -58,7 +58,7 @@ string check_pw(int max_pos, int pos, char salt[], string hash, string before)
     if (max_pos < 4)
     {
         string pw_later = check_pw(max_pos + 1, 0, salt, hash, "");
-        if(pw_later)
+        if (pw_later)
         {
             return pw_later;
         }
