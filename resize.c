@@ -142,8 +142,8 @@ int main(int argc, char *argv[])
     }
     else
     {
-        int p = ceil(1/n);
-        for (int i = 0, bioHeight = (abs(bio.biHeight)/p); i < bioHeight; i++)
+        int p = ceil(1 / n);
+        for (int i = 0, bioHeight = (abs(bio.biHeight) / p); i < bioHeight; i++)
         {
             // iterate over pixels in scanline
             for (int j = 0; j < bio.biWidth; j++)
@@ -156,8 +156,8 @@ int main(int argc, char *argv[])
 
                 if (j % p == 0)
                 {
-                        // write RGB triple to outfile
-                        fwrite(&triple, sizeof(RGBTRIPLE), 1, outptr);
+                    // write RGB triple to outfile
+                    fwrite(&triple, sizeof(RGBTRIPLE), 1, outptr);
                 }
             }
 
@@ -166,7 +166,7 @@ int main(int argc, char *argv[])
             {
                 fputc(0x00, outptr);
             }
-            int forward = (bio.biWidth * sizeof(RGBTRIPLE) + padding)*(p-1);
+            int forward = (bio.biWidth * sizeof(RGBTRIPLE) + (padding * 2)) * (p - 1);
             fseek(inptr, forward, SEEK_CUR);
         }
     }
