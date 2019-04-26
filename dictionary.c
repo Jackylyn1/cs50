@@ -74,7 +74,7 @@ unsigned int size(void)
     for (int i = 0; i < N; i++)
     {
         node *hash = hashtable[i];
-        while(hash)
+        while (hash)
         {
             num++;
             hash = hash->next;
@@ -90,9 +90,9 @@ bool check(const char *word)
     // anfangsbuchstabe zahl suchen, dann in dics nachsehen, dann durchlaufen bis gefunden oder ende, else return true
     int start = hash(word);
     node *hash = hashtable[start];
-    while(hash)
+    while (hash)
     {
-        if(strcasecmp(hash->word, word) == 0)
+        if (strcasecmp(hash->word, word) == 0)
         {
             return true;
         }
@@ -109,7 +109,7 @@ bool unload(void)
     for (int i = 0; i < N; i++)
     {
         node *hash = hashtable[i];
-        while(hash)
+        while (hash)
         {
             node *hash_old = hash;
             hash = hash->next;
