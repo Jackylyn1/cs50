@@ -1,0 +1,59 @@
+@media screen and (min-width: 600px)
+{
+    .textStuff
+        {
+            font-size: 20;
+            color: #e1ffe1;
+        }
+
+    header a:hover, header a:visited, header a:active
+        {
+            background-color: #0000ff;
+        }
+
+    #hi a:link
+        {
+            font-size : 30;
+            text-shadow : 3px 3px #333333;
+            text-overflow : ellipsis;
+        }
+
+    .bob
+        {
+            font-weight : bold;
+        }
+
+    td {
+        color : red;
+    }
+}
+
+@media screen and (max-width: 600px)
+{
+       .textStuff
+        {
+            font-size: 20;
+            color: #e1ffe1;
+        }
+
+    header a:hover, header a:visited, header a:active
+        {
+            background-color: #0000ff;
+        }
+
+    #hi a:link
+        {
+            font-size : 30;
+            text-shadow : 3px 3px #333333;
+            text-overflow : ellipsis;
+        }
+
+    .bob
+        {
+            font-weight : bold;
+        }
+
+     td {
+        color : red;
+        }
+}
