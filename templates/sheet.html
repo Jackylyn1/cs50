@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+    {% block main %}
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Faq</th>
+                </tr>
+            </thead>
+        {% for user in users %}
+            <tr>
+                <td>{{ user[0] }}</td>
+                <td>{{ user[1] }}</td>
+                <td>{{ user[2] }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    {% endblock %}
